@@ -74,14 +74,7 @@ function CardPersona({ persona }) {
           </div>
         ) : (
           <div className="flex flex-col">
-            <input
-              type="number"
-              name="cedula"
-              placeholder={persona.cedula}
-              value={formData.cedula}
-              onChange={handleChange}
-              className="block border border-gray-300 rounded p-1 mb-2"
-            />
+            <span className="block">Cedula: {persona.cedula}</span>
             <input
               type="text"
               name="primer_nombre"
