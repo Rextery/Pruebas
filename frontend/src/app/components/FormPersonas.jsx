@@ -8,7 +8,7 @@ function FormPersonas() {
     primer_nombre: "",
     segundo_nombre: "",
     sexo: "",
-    edad: 0,
+    edad: "",
     email: "",
     direccion: "",
   });
@@ -36,6 +36,19 @@ function FormPersonas() {
     )
     const data = await res.json();
     router.refresh()
+    resetForm()
+  };
+
+  const resetForm = () => {
+    setFormData({
+      cedula: "",
+      primer_nombre: "",
+      segundo_nombre: "",
+      sexo: "",
+      edad: "",
+      email: "",
+      direccion: "",
+    });
   };
 
   return (
@@ -54,7 +67,7 @@ function FormPersonas() {
               Cédula:
             </label>
             <input
-              type="text"
+              type="number"
               id="cedula"
               name="cedula"
               value={formData.cedula}

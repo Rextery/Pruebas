@@ -75,7 +75,7 @@ function CardPersona({ persona }) {
         ) : (
           <div className="flex flex-col">
             <input
-              type="text"
+              type="number"
               name="cedula"
               placeholder={persona.cedula}
               value={formData.cedula}
