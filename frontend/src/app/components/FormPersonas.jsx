@@ -67,9 +67,11 @@ function FormPersonas() {
               Cédula:
             </label>
             <input
-              type="number"
+              type="text"
               id="cedula"
               name="cedula"
+              pattern="[0-9]+" 
+              title="Ingrese solo números"
               value={formData.cedula}
               onChange={handleChange}
               className="border p-2 w-full"
@@ -89,6 +91,8 @@ function FormPersonas() {
               type="text"
               id="primer_nombre"
               name="primer_nombre"
+              pattern="[A-Za-z\s]+" 
+              title="Ingrese solo letras y espacios"
               value={formData.primer_nombre}
               onChange={handleChange}
               className="border p-2 w-full"
@@ -108,6 +112,8 @@ function FormPersonas() {
               type="text"
               id="segundo_nombre"
               name="segundo_nombre"
+              pattern="[A-Za-z\s]+" 
+              title="Ingrese solo letras y espacios"
               value={formData.segundo_nombre}
               onChange={handleChange}
               className="border p-2 w-full"
@@ -151,6 +157,7 @@ function FormPersonas() {
               onChange={handleChange}
               className="border p-2 w-full"
               required
+              max="110"
               min="0"
             />
           </div>
